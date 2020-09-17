@@ -12,16 +12,16 @@
         @foreach (var item in Guestbook.ListOfGuestbookEntries)
         {
             <div class="guestbook-entry">
-                <h3>Name:</h3><p>@item.GuestName</p>
-                <h3>Message:</h3><p>@item.GuestMessage</p>
-                <h3>Date:</h3><p>@item.EntryDateTime.ToString()</p>
+                <p><em>Name:</em>@item.GuestName</p>
+                <p><em>Message:</em>@item.GuestMessage</p>
+                <p><em>Date:</em>@item.EntryDateTime.ToString()</p>
             </div>
         }
 
     </div>
     <div class="guestbook-form">
         <form asp-action="AddGuestbookEntry" asp-controller="Guestbook">
-            <label asp-for="GuestName"></label>
+            <label asp-for="GuestName" >Guest Name</label>
             <input asp-for="GuestName" placeholder="Your message goes here"/>
             <label asp-for="GuestMessage"></label>
             <input asp-for="GuestMessage" placeholder="Your message goes here"/>

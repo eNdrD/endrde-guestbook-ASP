@@ -19,6 +19,7 @@ namespace endrde_guestbook.Controllers
         }
 
         [HttpGet]
+        [Route("/")]
         [Route("Guestbook/Index")]
         public IActionResult Index()
         {
